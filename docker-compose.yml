@@ -1,8 +1,8 @@
-version: "3.7"
+version: '3.7'
 
 services:
   db:
-    image: postgres
+    image: postgres:13
     restart: always
     environment:
       POSTGRES_USER: admin
@@ -10,22 +10,21 @@ services:
     volumes:
       - db-data:/var/lib/postgresql/data
     ports:
-      - "5432:5432"
+      - '5432:5432'
 
   pgadmin:
-    image: dpage/pgadmin4
+    image: dpage/pgadmin4:5
     restart: always
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@admin.org
       PGADMIN_DEFAULT_PASSWORD: secret
     ports:
-      - "8080:80"
+      - '8080:80'
     volumes:
       - pgadmin-data:/var/lib/pgadmin
     links:
-      - "db:pgsql-server"
+      - 'db:pgsql-server'
 
 volumes:
   db-data:
   pgadmin-data:
-
