@@ -3,7 +3,7 @@
 ## Requirements:
 
 - `python 3.x`, `django 3.x`, `docker` and `docker-compose`
-- Install postgres libraries and dependencies needed python module `pyscopg2`:
+- Install postgres libraries and dependencies needed by `psycopg2`:
 
   - On Arch Linux: `sudo pacman -S postgresql-libs`
   - On Ubuntu/Debian: `sudo apt install postgresql-server-dev-all`
@@ -28,11 +28,10 @@ DATABASES = {
 }
 ```
 
-## Start postgres database containers and run django development server
+## Start postgres database containers
 
 ```
 $ docker-compose up -d
-$ python manage.py runserver
 ```
 
 #### Connect to the database via CLI
