@@ -1,7 +1,6 @@
 # dev-postgres
 
-## Requirements:
-
+## Requirements for a Django application development:
 - `python 3.x`, `django 3.x`, `docker` and `docker-compose`
 - Install postgres libraries and dependencies needed by `psycopg2`:
 
