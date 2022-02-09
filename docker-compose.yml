@@ -19,7 +19,7 @@ services:
       PGADMIN_DEFAULT_EMAIL: admin@admin.org
       PGADMIN_DEFAULT_PASSWORD: secret
     ports:
-      - '8081:81'
+      - '8081:80'
     volumes:
       - pgadmin-data:/var/lib/pgadmin
     links:
