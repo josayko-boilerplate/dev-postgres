@@ -48,4 +48,4 @@ admin=#
 
 1. Login to pgadmin4 dashboard at `127.0.0.1:8081`. By default, email is `admin@admin.org` and password is `pass123`
 2. `Add new server`, enter a name in General tab
-3. In Connection tab, default `Hostname` is `pgsql-server`. Leave default Port at `5432` and Maintenance database to `postgres`. `Username` is `admin` and Password is `pass123`
+3. In Connection tab, default `Hostname` is `psql-server`. Leave default Port at `5432` and Maintenance database to `postgres`. `Username` is `admin` and Password is `pass123`

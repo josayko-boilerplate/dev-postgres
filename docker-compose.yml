@@ -23,7 +23,7 @@ services:
     volumes:
       - pgadmin-data:/var/lib/pgadmin
     links:
-      - 'db:pgsql-server'
+      - 'db:psql-server'
 
 volumes:
   db-data:
