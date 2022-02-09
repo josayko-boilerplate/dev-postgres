@@ -17,7 +17,7 @@ services:
     restart: always
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@admin.org
-      PGADMIN_DEFAULT_PASSWORD: secret
+      PGADMIN_DEFAULT_PASSWORD: pass123
     ports:
       - '8081:80'
     volumes:
