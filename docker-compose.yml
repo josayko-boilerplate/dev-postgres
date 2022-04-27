@@ -14,9 +14,11 @@ services:
       - 5432:5432
 
   pgadmin:
-    image: dpage/pgadmin4:6.7
+    image: dpage/pgadmin4:6.8
     container_name: dev-pgadmin
     restart: always
+    depends_on:
+      - postgres
     environment:
       PGADMIN_DEFAULT_EMAIL: admin@admin.org
       PGADMIN_DEFAULT_PASSWORD: S3cret
@@ -25,7 +27,7 @@ services:
     volumes:
       - pgadmin-data:/var/lib/pgadmin
     links:
-      - postgres:postgres-server
+      - postgres
 
 volumes:
   db-data:
