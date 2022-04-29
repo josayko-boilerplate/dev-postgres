@@ -22,8 +22,8 @@ admin=# CREATE DATABASE <your_database>;
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'admin',
-        'USER': '<your_dataabse>',
+        'NAME': '<database_name>',
+        'USER': 'admin',
         'HOST': 'localhost',
         'PORT': 5432,
         'PASSWORD': 'S3cret'
@@ -40,7 +40,7 @@ $ docker-compose up -d
 #### Connect to the database via CLI
 
 ```
-$ docker exec -it dev-postgres /bin/bash
+$ docker exec -it dev-postgres psql -U admin
 ```
 
 #### Connect to the database via pgadmin4 dashboard
