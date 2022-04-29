@@ -4,19 +4,17 @@ services:
   postgres:
     image: postgres:14.2-alpine
     container_name: dev-postgres
-    restart: always
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: S3cret
     volumes:
-      - db-data:/var/lib/postgresql/data
+      - postgres-data:/var/lib/postgresql/data
     ports:
       - 5432:5432
 
   pgadmin:
     image: dpage/pgadmin4:6.8
     container_name: dev-pgadmin
-    restart: always
     depends_on:
       - postgres
     environment:
@@ -30,5 +28,5 @@ services:
       - postgres
 
 volumes:
-  db-data:
+  postgres-data:
   pgadmin-data:
