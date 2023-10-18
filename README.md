@@ -1,6 +1,7 @@
 # dev-postgres
 
 ## Requirements for a Django application development:
+
 - `python 3.x`, `django 3.x`, `docker` and `docker-compose`
 - Install either `psycopg2-binary` or `psycopg2` module:
   - `pip install psycopg2-binary`
@@ -8,6 +9,7 @@
 #### Django 3.x project configuration example
 
 - Create a database on CLI
+
 ```
 $ docker exec -it dev-postgres /bin/bash
 bash-5.1# psql -U admin
@@ -18,6 +20,7 @@ admin=# CREATE DATABASE <your_database>;
 ```
 
 - In `settings.py`
+
 ```python
 DATABASES = {
     'default': {
@@ -40,7 +43,7 @@ $ docker-compose up -d
 #### Connect to the database via CLI
 
 ```
-$ docker exec -it dev-postgres psql -U admin
+$ docker exec -it dev-postgres psql -U postgres
 ```
 
 #### Connect to the database via pgadmin4 dashboard
