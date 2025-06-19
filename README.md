@@ -1,6 +1,6 @@
 # dev-postgres
 
-Development container with SSL enforced. Database initialization script in `initdb/01-init.sh`.
+Development container with SSL enforced. Database initialization script in `initdb/01-init_db.sh`.
 
 
 ## Start postgres database containers
