@@ -1,12 +1,31 @@
 # dev-postgres
 
-## Requirements for a Django application development:
+Development container with SSL enforced. Database initialization script in `initdb/01-init.sh`.
+
+
+## Start postgres database containers
+
+```
+$ docker-compose up -d
+```
+
+### Connect to the database via CLI
+
+```
+$ psql "postgresql://postgres@localhost:5432/postgres?sslmode=require"
+```
+
+## Example configurations
+
+### Django
+
+#### Requirements:
 
 - `python 3.x`, `django 3.x`, `docker` and `docker-compose`
 - Install either `psycopg2-binary` or `psycopg2` module:
   - `pip install psycopg2-binary`
 
-#### Django 3.x project configuration example
+#### Example
 
 - Create a database on CLI
 
@@ -33,21 +52,3 @@ DATABASES = {
     }
 }
 ```
-
-## Start postgres database containers
-
-```
-$ docker-compose up -d
-```
-
-#### Connect to the database via CLI
-
-```
-$ docker exec -it dev-postgres psql -U postgres
-```
-
-#### Connect to the database via pgadmin4 dashboard
-
-1. Login to pgadmin4 dashboard at `127.0.0.1:8080`. By default, email is `admin@admin.org` and password is `S3cret`
-2. `Add new server`, enter a name in General tab
-3. In Connection tab, default `Host name/address` is `postgres`. Leave default Port at `5432` and Maintenance database to `postgres`. `Username` is `postgres` and Password is `postgres`
