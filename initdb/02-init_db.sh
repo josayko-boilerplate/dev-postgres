@@ -30,7 +30,7 @@ psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" <<-E
       created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
     );
 
-    -- Insett some initial data into the todo table
+    -- Insert some initial data into the todo table
     INSERT INTO todo (description, completed) VALUES
       ('First Todo Item', FALSE),
       ('Second Todo Item', TRUE),
